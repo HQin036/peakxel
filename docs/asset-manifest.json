@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/peakxel/static/css/main.48388d8d.css",
+    "main.js": "/peakxel/static/js/main.f9b7405c.js",
+    "static/js/453.7c18d2e6.chunk.js": "/peakxel/static/js/453.7c18d2e6.chunk.js",
+    "static/media/logo.webp": "/peakxel/static/media/logo.465d8677feb8f053d239.webp",
+    "index.html": "/peakxel/index.html",
+    "main.48388d8d.css.map": "/peakxel/static/css/main.48388d8d.css.map",
+    "main.f9b7405c.js.map": "/peakxel/static/js/main.f9b7405c.js.map",
+    "453.7c18d2e6.chunk.js.map": "/peakxel/static/js/453.7c18d2e6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48388d8d.css",
+    "static/js/main.f9b7405c.js"
+  ]
+}
