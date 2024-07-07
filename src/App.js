@@ -1,24 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import Home from './components/Home';
+import ControlPanel from './components/ControlPanel';
+import Support from './components/Support';
+import FAQ from './components/FAQ';
+import Plans from './components/Plans';
+import Dashboard from './components/Dashboard';
+import ChatBotWrapper from './components/ChatBotWrapper';
+import './App.css'; 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div id="root">
+        <Navbar expand="lg" fixed="top" className="navbar">
+          <Container>
+            <Navbar.Brand as={NavLink} to="/" className="brand">
+              PEAKXEL
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto" style={{ marginLeft: 'auto' }}>
+                <Nav.Link as={NavLink} exact to="/" activeClassName="active-nav-link">
+                  Home
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/plans" activeClassName="active-nav-link">
+                  Plans
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/faq" activeClassName="active-nav-link">
+                  FAQ
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/support" activeClassName="active-nav-link">
+                  Support
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/control-panel" activeClassName="active-nav-link">
+                  Control Panel
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <div className="main-content">
+          <Container> {}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/plans" element={<Plans />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/support" element={<Support />} />
+              <Route path="/control-panel" element={<ControlPanel />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Routes>
+          </Container>
+        </div>
+        <footer className="footer">
+          <Container>
+            <p>&copy; 2024 PEAKXEL. All rights reserved.</p>
+          </Container>
+        </footer>
+        <ChatBotWrapper />
+      </div>
+    </Router>
   );
 }
 
