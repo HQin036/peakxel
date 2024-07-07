@@ -1,6 +1,7 @@
 {
   "name": "peakxel",
   "version": "0.1.0",
+  "homepage": "https://hqin036.github.io/peakxel",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
